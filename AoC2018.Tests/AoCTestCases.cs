@@ -45,5 +45,13 @@ namespace Tests
             string result = solution.Solve("1, 1\r\n1, 6\r\n8, 3\r\n3, 4\r\n5, 5\r\n8, 9", 32);
             Assert.That(result, Is.EqualTo("16"));
         }
+
+        [Test]
+        public void Day07Part02()
+        {
+            var solution = new AoC2018.Solutions.Day07.Part02();
+            string result = solution.Solve("Step C must be finished before step A can begin.\r\nStep C must be finished before step F can begin.\r\nStep A must be finished before step B can begin.\r\nStep A must be finished before step D can begin.\r\nStep B must be finished before step E can begin.\r\nStep D must be finished before step E can begin.\r\nStep F must be finished before step E can begin.", 2, 0);
+            Assert.That(result, Is.EqualTo("15"));
+        }
     }
 }
