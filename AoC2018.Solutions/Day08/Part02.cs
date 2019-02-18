@@ -4,13 +4,13 @@
     using System.Collections.Generic;
     using System.Linq;
 
-    public class Part01 : ISolution
+    public class Part02 : ISolution
     {
         public string Solve(string input)
         {
             var licenceFile = LicenceFile.Parse(input);
 
-            return licenceFile.RootNodes.MetadataChecksum().ToString();
+            return licenceFile.RootNodes[0].Value().ToString();
         }
     }
 }
