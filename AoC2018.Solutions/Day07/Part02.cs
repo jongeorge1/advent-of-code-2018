@@ -47,8 +47,8 @@
                 }
 
                 second++;
-
-            } while (resolvedSteps.Count != allSteps.Length);
+            }
+            while (resolvedSteps.Count != allSteps.Length);
 
             // We will have counted on to the next second after completion...
             return (second - 1).ToString();
