@@ -55,5 +55,18 @@ namespace Tests
             string result = solution.Solve("Step C must be finished before step A can begin.\r\nStep C must be finished before step F can begin.\r\nStep A must be finished before step B can begin.\r\nStep A must be finished before step D can begin.\r\nStep B must be finished before step E can begin.\r\nStep D must be finished before step E can begin.\r\nStep F must be finished before step E can begin.", 2, 0);
             Assert.That(result, Is.EqualTo("15"));
         }
+
+        [TestCase(9, 25, 32)]
+        [TestCase(10, 1618, 8317)]
+        [TestCase(13, 7999, 146373)]
+        [TestCase(17, 1104, 2764)]
+        [TestCase(21, 6111, 54718)]
+        [TestCase(30, 5807, 37305)]
+        public void Day09Part01(int players, int lastMarble, long expectedHighScore)
+        {
+            var solution = new AoC2018.Solutions.Day09.Part01();
+            long result = solution.Solve(players, lastMarble);
+            Assert.That(result, Is.EqualTo(expectedHighScore));
+        }
     }
 }
