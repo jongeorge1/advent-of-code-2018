@@ -30,6 +30,7 @@ namespace Tests
         [TestCase(5, 1, "dabAcCaCBAcCcaDA", "10")]
         [TestCase(5, 2, "dabAcCaCBAcCcaDA", "4")]
         [TestCase(6, 1, "1, 1\r\n1, 6\r\n8, 3\r\n3, 4\r\n5, 5\r\n8, 9", "17")]
+        [TestCase(7, 1, "Step C must be finished before step A can begin.\r\nStep C must be finished before step F can begin.\r\nStep A must be finished before step B can begin.\r\nStep A must be finished before step D can begin.\r\nStep B must be finished before step E can begin.\r\nStep D must be finished before step E can begin.\r\nStep F must be finished before step E can begin.", "CABDFE")]
         public void Tests(int day, int part, string input, string expectedResult)
         {
             ISolution solution = SolutionFactory.GetSolution(day, part);
