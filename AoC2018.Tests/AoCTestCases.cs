@@ -35,8 +35,9 @@ namespace Tests
         [TestCase(8, 2, "2 3 0 3 10 11 12 1 1 0 1 99 2 1 1 2", "66")]
         [TestCase(11, 1, "18", "33,45")]
         [TestCase(11, 1, "42", "21,61")]
-        [TestCase(11, 2, "18", "90,269,16")]
-        [TestCase(11, 2, "42", "232,251,12")]
+        ////[TestCase(11, 2, "18", "90,269,16")]
+        ////[TestCase(11, 2, "42", "232,251,12")]
+        [TestCase(12, 1, "initial state: #..#.#..##......###...###\r\n\r\n...## => #\r\n..#.. => #\r\n.#... => #\r\n.#.#. => #\r\n.#.## => #\r\n.##.. => #\r\n.#### => #\r\n#.#.# => #\r\n#.### => #\r\n##.#. => #\r\n##.## => #\r\n###.. => #\r\n###.# => #\r\n####. => #", "325")]
         public void Tests(int day, int part, string input, string expectedResult)
         {
             ISolution solution = SolutionFactory.GetSolution(day, part);
