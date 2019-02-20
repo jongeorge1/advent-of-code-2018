@@ -38,6 +38,8 @@ namespace Tests
         ////[TestCase(11, 2, "18", "90,269,16")]
         ////[TestCase(11, 2, "42", "232,251,12")]
         [TestCase(12, 1, "initial state: #..#.#..##......###...###\r\n\r\n...## => #\r\n..#.. => #\r\n.#... => #\r\n.#.#. => #\r\n.#.## => #\r\n.##.. => #\r\n.#### => #\r\n#.#.# => #\r\n#.### => #\r\n##.#. => #\r\n##.## => #\r\n###.. => #\r\n###.# => #\r\n####. => #", "325")]
+        [TestCase(13, 1, "/->-\\        \r\n|   |  /----\\\r\n| /-+--+-\\  |\r\n| | |  | v  |\r\n\\-+-/  \\-+--/\r\n  \\------/   ", "7,3")]
+        [TestCase(13, 2, "/>-<\\  \r\n|   |  \r\n| /<+-\\\r\n| | | v\r\n\\>+</ |\r\n  |   ^\r\n  \\<->/", "6,4")]
         public void Tests(int day, int part, string input, string expectedResult)
         {
             ISolution solution = SolutionFactory.GetSolution(day, part);

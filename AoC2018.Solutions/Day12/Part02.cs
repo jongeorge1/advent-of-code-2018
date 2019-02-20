@@ -52,7 +52,7 @@
                 }
             }
 
-            // We need to get to 50,000,000...
+            // We need to get to 50,000,000,000...
             long remainingGenerations = 50000000000 - generation;
             long remainingIncrement = remainingGenerations * lastIncrement;
             long total = lastResult + remainingIncrement;
