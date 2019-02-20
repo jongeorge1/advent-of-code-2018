@@ -40,6 +40,14 @@ namespace Tests
         [TestCase(12, 1, "initial state: #..#.#..##......###...###\r\n\r\n...## => #\r\n..#.. => #\r\n.#... => #\r\n.#.#. => #\r\n.#.## => #\r\n.##.. => #\r\n.#### => #\r\n#.#.# => #\r\n#.### => #\r\n##.#. => #\r\n##.## => #\r\n###.. => #\r\n###.# => #\r\n####. => #", "325")]
         [TestCase(13, 1, "/->-\\        \r\n|   |  /----\\\r\n| /-+--+-\\  |\r\n| | |  | v  |\r\n\\-+-/  \\-+--/\r\n  \\------/   ", "7,3")]
         [TestCase(13, 2, "/>-<\\  \r\n|   |  \r\n| /<+-\\\r\n| | | v\r\n\\>+</ |\r\n  |   ^\r\n  \\<->/", "6,4")]
+        [TestCase(14, 1, "9", "5158916779")]
+        [TestCase(14, 1, "5", "0124515891")]
+        [TestCase(14, 1, "18", "9251071085")]
+        [TestCase(14, 1, "2018", "5941429882")]
+        [TestCase(14, 2, "51589", "9")]
+        [TestCase(14, 2, "01245", "5")]
+        [TestCase(14, 2, "92510", "18")]
+        [TestCase(14, 2, "59414", "2018")]
         public void Tests(int day, int part, string input, string expectedResult)
         {
             ISolution solution = SolutionFactory.GetSolution(day, part);
