@@ -64,5 +64,17 @@
         {
             return state.Map.Sum(x => x?.Unit?.HitPoints ?? 0);
         }
+
+        public static int CountUnits<T>(this State state)
+            where T : Unit
+        {
+            return state.Map.Count(x => x?.Unit?.GetType() == typeof(T));
+        }
+
+        public static T[] GetUnits<T>(this State state)
+            where T : Unit
+        {
+            return state.Map.Where(x => x?.Unit?.GetType() == typeof(T)).Select(x => (T)x.Unit).ToArray();
+        }
     }
 }
