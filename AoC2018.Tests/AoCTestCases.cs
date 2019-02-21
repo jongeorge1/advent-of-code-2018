@@ -48,6 +48,11 @@ namespace Tests
         [TestCase(14, 2, "01245", "5")]
         [TestCase(14, 2, "92510", "18")]
         [TestCase(14, 2, "59414", "2018")]
+        [TestCase(15, 1, "#######\r\n#G..#E#\r\n#E#E.E#\r\n#G.##.#\r\n#...#E#\r\n#...E.#\r\n#######", "36334")]
+        [TestCase(15, 1, "#######\r\n#E..EG#\r\n#.#G.E#\r\n#E.##E#\r\n#G..#.#\r\n#..E#.#\r\n#######", "39514")]
+        [TestCase(15, 1, "#######\r\n#E.G#.#\r\n#.#G..#\r\n#G.#.G#\r\n#G..#.#\r\n#...E.#\r\n#######", "27755")]
+        [TestCase(15, 1, "#######\r\n#.E...#\r\n#.#..G#\r\n#.###.#\r\n#E#G#G#\r\n#...#G#\r\n#######", "28944")]
+        [TestCase(15, 1, "#########\r\n#G......#\r\n#.E.#...#\r\n#..##..G#\r\n#...##..#\r\n#...#...#\r\n#.G...G.#\r\n#.....G.#\r\n#########", "18740")]
         public void Tests(int day, int part, string input, string expectedResult)
         {
             ISolution solution = SolutionFactory.GetSolution(day, part);
