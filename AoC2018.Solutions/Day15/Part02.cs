@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace AoC2018.Solutions.Day15
+﻿namespace AoC2018.Solutions.Day15
 {
     public class Part02 : ISolution
     {
@@ -54,7 +52,6 @@ namespace AoC2018.Solutions.Day15
                     return (rounds * currentState.TotalRemainingHitPoints()).ToString();
                 }
             }
-
         }
     }
 }

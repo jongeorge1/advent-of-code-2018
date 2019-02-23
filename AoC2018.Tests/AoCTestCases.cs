@@ -53,6 +53,7 @@ namespace Tests
         [TestCase(15, 1, "#######\r\n#E.G#.#\r\n#.#G..#\r\n#G.#.G#\r\n#G..#.#\r\n#...E.#\r\n#######", "27755")]
         [TestCase(15, 1, "#######\r\n#.E...#\r\n#.#..G#\r\n#.###.#\r\n#E#G#G#\r\n#...#G#\r\n#######", "28944")]
         [TestCase(15, 1, "#########\r\n#G......#\r\n#.E.#...#\r\n#..##..G#\r\n#...##..#\r\n#...#...#\r\n#.G...G.#\r\n#.....G.#\r\n#########", "18740")]
+        [TestCase(16, 1, "Before: [3, 2, 1, 1]\r\n9 2 1 2\r\nAfter:  [3, 2, 2, 1]", "1")]
         public void Tests(int day, int part, string input, string expectedResult)
         {
             ISolution solution = SolutionFactory.GetSolution(day, part);
