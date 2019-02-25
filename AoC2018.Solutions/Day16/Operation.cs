@@ -4,7 +4,13 @@
 
     public class Operation
     {
-        public static Operation[] All = new[]
+        public Operation(string name, Action<int[], Instruction> instruction)
+        {
+            this.Name = name;
+            this.Execute = instruction;
+        }
+
+        public static Operation[] All { get; } = new[]
         {
             new Operation("addr", (registers, instruction) => registers[instruction.C] = registers[instruction.A] + registers[instruction.B]),
             new Operation("addi", (registers, instruction) => registers[instruction.C] = registers[instruction.A] + instruction.B),
@@ -23,12 +29,6 @@
             new Operation("eqri", (registers, instruction) => registers[instruction.C] = registers[instruction.A] == instruction.B ? 1 : 0),
             new Operation("eqrr", (registers, instruction) => registers[instruction.C] = registers[instruction.A] == registers[instruction.B] ? 1 : 0),
         };
-
-        public Operation(string name, Action<int[], Instruction> instruction)
-        {
-            this.Name = name;
-            this.Execute = instruction;
-        }
 
         public int? OpCode { get; set; }
 
