@@ -57,6 +57,7 @@ namespace Tests
         [TestCase(17, 1, "x=495, y=2..7\r\ny=7, x=495..501\r\nx=501, y=3..7\r\nx=498, y=2..4\r\nx=506, y=1..2\r\nx=498, y=10..13\r\nx=504, y=10..13\r\ny=13, x=498..504", "57")]
         [TestCase(17, 2, "x=495, y=2..7\r\ny=7, x=495..501\r\nx=501, y=3..7\r\nx=498, y=2..4\r\nx=506, y=1..2\r\nx=498, y=10..13\r\nx=504, y=10..13\r\ny=13, x=498..504", "29")]
         [TestCase(18, 1, ".#.#...|#.\r\n.....#|##|\r\n.|..|...#.\r\n..|#.....#\r\n#.#|||#|#|\r\n...#.||...\r\n.|....|...\r\n||...#|.#|\r\n|.||||..|.\r\n...#.|..|.", "1147")]
+        [TestCase(19, 1, "#ip 0\r\nseti 5 0 1\r\nseti 6 0 2\r\naddi 0 1 0\r\naddr 1 2 3\r\nsetr 1 0 0\r\nseti 8 0 4\r\nseti 9 0 5", "6")]
         public void Tests(int day, int part, string input, string expectedResult)
         {
             ISolution solution = SolutionFactory.GetSolution(day, part);
