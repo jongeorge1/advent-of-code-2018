@@ -27,7 +27,7 @@
             int stableGenerations = 0;
             int generation = 0;
 
-            while (true)
+            do
             {
                 generation++;
                 state = state.Apply(rules);
@@ -45,12 +45,8 @@
                 }
 
                 lastResult = result;
-
-                if (stableGenerations == 100)
-                {
-                    break;
-                }
             }
+            while (stableGenerations != 100);
 
             // We need to get to 50,000,000,000...
             long remainingGenerations = 50000000000 - generation;

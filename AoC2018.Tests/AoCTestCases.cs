@@ -65,6 +65,13 @@ namespace Tests
         [TestCase(20, 1, "^WSSEESWWWNW(S|NENNEEEENN(ESSSSW(NWSW|SSEN)|WSWWN(E|WWS(E|SS))))$", "31")]
         [TestCase(22, 1, "depth: 510\r\ntarget: 10,10", "114")]
         [TestCase(22, 2, "depth: 510\r\ntarget: 10,10", "45")]
+        [TestCase(23, 1, "pos=<0,0,0>, r=4\r\npos=<1,0,0>, r=1\r\npos=<4,0,0>, r=3\r\npos=<0,2,0>, r=1\r\npos=<0,5,0>, r=3\r\npos=<0,0,3>, r=1\r\npos=<1,1,1>, r=1\r\npos=<1,1,2>, r=1\r\npos=<1,3,1>, r=1", "7")]
+        [TestCase(23, 2, "pos=<10,12,12>, r=2\r\npos=<12,14,12>, r=2\r\npos=<16,12,12>, r=4\r\npos=<14,14,14>, r=6\r\npos=<50,50,50>, r=200\r\npos=<10,10,10>, r=5", "36")]
+        [TestCase(25, 1, "-1,2,2,0\r\n0,0,2,-2\r\n0,0,0,-2\r\n-1,2,0,0\r\n-2,-2,-2,2\r\n3,0,2,-1\r\n-1,3,2,2\r\n-1,0,-1,0\r\n0,2,1,-2\r\n3,0,0,0", "4")]
+        [TestCase(25, 1, "1,-1,0,1\r\n2,0,-1,0\r\n3,2,-1,0\r\n0,0,3,1\r\n0,0,-1,-1\r\n2,3,-2,0\r\n-2,2,0,0\r\n2,-2,0,-1\r\n1,-1,0,-1\r\n3,2,0,2", "3")]
+        [TestCase(25, 1, "1,-1,-1,-2\r\n-2,-2,0,1\r\n0,2,1,3\r\n-2,3,-2,1\r\n0,2,3,-2\r\n-1,-1,1,-2\r\n0,-2,-1,0\r\n-2,2,3,-1\r\n1,2,2,0\r\n-1,-2,0,-2", "8")]
+        [TestCase(24, 1, "Immune System:\r\n17 units each with 5390 hit points (weak to radiation, bludgeoning) with an attack that does 4507 fire damage at initiative 2\r\n989 units each with 1274 hit points (immune to fire; weak to bludgeoning, slashing) with an attack that does 25 slashing damage at initiative 3\r\n\r\nInfection:\r\n801 units each with 4706 hit points (weak to radiation) with an attack that does 116 bludgeoning damage at initiative 1\r\n4485 units each with 2961 hit points (immune to radiation; weak to fire, cold) with an attack that does 12 slashing damage at initiative 4", "5216")]
+        [TestCase(24, 2, "Immune System:\r\n17 units each with 5390 hit points (weak to radiation, bludgeoning) with an attack that does 4507 fire damage at initiative 2\r\n989 units each with 1274 hit points (immune to fire; weak to bludgeoning, slashing) with an attack that does 25 slashing damage at initiative 3\r\n\r\nInfection:\r\n801 units each with 4706 hit points (weak to radiation) with an attack that does 116 bludgeoning damage at initiative 1\r\n4485 units each with 2961 hit points (immune to radiation; weak to fire, cold) with an attack that does 12 slashing damage at initiative 4", "51")]
         public void Tests(int day, int part, string input, string expectedResult)
         {
             ISolution solution = SolutionFactory.GetSolution(day, part);

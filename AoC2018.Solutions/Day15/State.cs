@@ -24,7 +24,7 @@
 
         public override string ToString()
         {
-            string mapString = string.Join(string.Empty, this.Map.Select(x => x?.ToString() ?? "#"));
+            string mapString = string.Concat(this.Map.Select(x => x?.ToString() ?? "#"));
             IEnumerable<string> rows = Enumerable.Range(0, this.Map.Length / this.YOffset).Select(x => mapString.Substring(x * this.YOffset, this.YOffset));
             return string.Join(Environment.NewLine, rows);
         }

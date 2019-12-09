@@ -7,8 +7,9 @@
     {
         public static string React(string polymer)
         {
-            bool changed = false;
             var current = polymer.ToCharArray().ToList();
+
+            bool changed;
 
             do
             {

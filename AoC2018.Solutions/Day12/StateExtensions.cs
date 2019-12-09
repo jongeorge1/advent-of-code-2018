@@ -17,7 +17,7 @@
         }
 
         /// <summary>
-        /// Finds pot numbers that match this rule
+        /// Finds pot numbers that match this rule.
         /// </summary>
         public static int[] FindMatches(this State state, Rule rule)
         {

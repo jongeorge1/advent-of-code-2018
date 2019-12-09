@@ -32,7 +32,7 @@
             var shortestTimes = new Dictionary<(int X, int Y, Tools equippedTool), int>();
 
             // Today has introduced me to the concept of the "priority queue", which is
-            // essentially a sorted queue. Using this type of queue is the difference between 
+            // essentially a sorted queue. Using this type of queue is the difference between
             // an execution time of many minutes and a few seconds. Essentially, by keeping the
             // paths that have taken the shortest time so far at the front of the queue, we
             // have more likelihood of reaching sqaures in the shortest time, which means we

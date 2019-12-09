@@ -26,7 +26,7 @@
                 Y = points.Max(x => x.Y),
             };
 
-            var pointsInRange = 0;
+            int pointsInRange = 0;
 
             // Theory: if we find the grid that contains all the points,
             // then calculate the ownership of every cell in the grid,

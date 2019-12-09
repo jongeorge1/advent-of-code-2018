@@ -2,7 +2,7 @@
   "profiles": {
     "AoC2018.Runner": {
       "commandName": "Project",
-      "commandLineArgs": "22 2"
+      "commandLineArgs": "23 2"
     }
   }
 }

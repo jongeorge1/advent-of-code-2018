@@ -40,7 +40,7 @@
             {
                 for (int y = 0; y < erosionLevels.GetLength(1); y++)
                 {
-                    riskLevels[x, y] = GetRiskLevel(erosionLevels[x, y], depth);
+                    riskLevels[x, y] = GetRiskLevel(erosionLevels[x, y]);
                 }
             }
 
@@ -113,7 +113,7 @@
             return (int)((geologicIndex + depth) % 20183);
         }
 
-        private static int GetRiskLevel(int erosionLevel, int depth)
+        private static int GetRiskLevel(int erosionLevel)
         {
             return erosionLevel % 3;
         }

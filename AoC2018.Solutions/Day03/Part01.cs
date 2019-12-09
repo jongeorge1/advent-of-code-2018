@@ -19,7 +19,7 @@
                 {
                     for (int y = 0; y < claim.Size.Height; y++)
                     {
-                        int target = (claim.Position.X + x) + (yOffset * (claim.Position.Y + y));
+                        int target = claim.Position.X + x + (yOffset * (claim.Position.Y + y));
                         locations[target] = locations.ContainsKey(target) ? locations[target] + 1 : 1;
                     }
                 }
