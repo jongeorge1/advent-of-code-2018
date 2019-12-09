@@ -13,12 +13,6 @@
                 .Select(x => new Nanobot(x))
                 .ToList();
 
-            (int X, int Y, int Z) bestLocation = (0, 0, 0);
-            int botsInRangeAtBestLocation = 0;
-            int bestLocationDistanceFromOrigin = int.MaxValue;
-
-            int granularity = bots.Count < 50 ? 1 : (int)Math.Pow(2, 22);
-
             (int MinX, int MaxX, int MinY, int MaxY, int MinZ, int MaxZ) bounds =
                 (bots.Min(bot => bot.Position.X),
                 bots.Max(bot => bot.Position.X),
@@ -50,6 +44,12 @@
             };
 
             var boxQueue = new SimplePriorityQueue<Box>();
+
+            // We're using the nanobots in range metric to order the priority queue. We have negate it
+            // because we want the highest first. This would likely not work for all inputs - if there
+            // were multiple points with the same number of nanobots in range we'd need to deal with that.
+            // We'd likely do that by implementing a custom comparer that sorted on nanobots, then on box size
+            // (largest first) and on distance from the origin (closest first).
             boxQueue.Enqueue(box, -box.NanobotsInRange);
 
             while (boxQueue.Count > 0)
